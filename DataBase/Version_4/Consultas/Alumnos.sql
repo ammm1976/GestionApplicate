@@ -1,0 +1,2 @@
+SELECT alumnos.*
+FROM alumnos;

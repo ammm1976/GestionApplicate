@@ -1,0 +1,2 @@
+SELECT cursos.*
+FROM cursos;

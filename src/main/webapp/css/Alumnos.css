@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;    
+}
+
+ul {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+a:visited {
+    color: black;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th {
+    padding: 0 10px;
+}
+
+td {
+    text-align: center;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+footer {
+    text-align: center;
+}

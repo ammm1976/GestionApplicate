@@ -1,0 +1,4 @@
+Añadir llegado su momento tabla de usuarios.
+
+Añadir también modificar y tal vez eliminar alumnos ( añadir trigger para actualizar las plazas disponibles ).
+En ese punto habría que pensar la necesidad o conveniencia de modificar el programa que actualiza B2B, o hacer uno nuevo que lo actualice desde GestionApplicate en vez de desde donde lo haga, y eliminar el antiguo.

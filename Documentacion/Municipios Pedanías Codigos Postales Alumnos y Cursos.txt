@@ -1,0 +1,9 @@
+Las pedanías tienen que tener código postal
+Los municipios tienen que tener código postal
+
+Los alumnos tienen que tener municipio
+Los alumnos pueden tener pedanía
+Los alumnos tienen que tener código postal ( si tienen pedanía, el de la pedanía. Si no el del municipio )
+Los cursos tienen que tener municipio
+Los cursos pueden no tener código postal.
+

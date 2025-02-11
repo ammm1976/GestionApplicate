@@ -1,0 +1,5 @@
+Pantalla consultar todos los alumnos
+Pantalla consultar todos los cursos
+Pantalla consultar alumnos por DNI
+Pantalla consultar alumnos por curso
+Pantalla consultar cursos por localización
