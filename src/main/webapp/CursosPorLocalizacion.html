@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión Applicate</title>
     <link rel="stylesheet" href="./css/CursosPorLocalizacion.css">
+    <script src="js/CursosPorLocalizacion.js"></script>
 </head>
 <body>
     <header>
@@ -22,6 +23,29 @@
     </header>
     <main>
         <h2>Cursos por localización</h2>
+        <div>
+            <label for="localizacion">Municipio:</label>
+            <input type="text" id="localizacion" onkeyup="cursosPorLocalizacion()">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Itinerario</th>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Código Postal</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Formación</th>
+                    <th scope="col">Nivel de la formación</th>
+                    <th scope="col">Turno</th>
+                    <th scope="col">Fecha de inicio</th>
+                    <th scope="col">Fecha de fin</th>
+                    <th scope="col">Plazas disponibles</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
     </main>
     <footer>
         <p>ThePower education</p>

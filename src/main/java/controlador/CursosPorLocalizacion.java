@@ -4,9 +4,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import beans.Curso;
-import servicio.ServicioCursos;
-
+import servicio.ServicioCursosPorLocalizacion;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,17 +15,19 @@ import org.apache.log4j.Logger;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import beans.Curso;
+
 /**
- * Servlet implementation class ListadoHabilidadesServlet
+ * Servlet implementation class CursosPorLocalizacion
  */
-public class Cursos extends HttpServlet {
+public class CursosPorLocalizacion extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger("mylog");
-       
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Cursos() {
+    public CursosPorLocalizacion() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,10 +39,11 @@ public class Cursos extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		log.debug("Peticion GET en el servlet");
-		ServicioCursos servicioCursos = new ServicioCursos();
+		ServicioCursosPorLocalizacion servicioCursosPorLocalizacion = new ServicioCursosPorLocalizacion();
+		String municipio = request.getParameter("localizacion");
 		
 		try {
-			List<Curso> cursos = servicioCursos.recuperarListadoCursos();
+			List<Curso> cursos = servicioCursosPorLocalizacion.recuperarListadoCursosPorLocalizacion(municipio);
 			Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
 			String listaJsonCursos = gson.toJson(cursos);
 			response.getWriter().write(listaJsonCursos);

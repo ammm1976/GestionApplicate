@@ -49,4 +49,14 @@
     <servlet-name>AlumnosPorDni</servlet-name>
     <url-pattern>/AlumnosPorDni</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CursosPorLocalizacion</display-name>
+    <servlet-name>CursosPorLocalizacion</servlet-name>
+    <servlet-class>controlador.CursosPorLocalizacion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CursosPorLocalizacion</servlet-name>
+    <url-pattern>/CursosPorLocalizacion</url-pattern>
+  </servlet-mapping>
 </web-app>
