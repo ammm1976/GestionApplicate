@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión Applicate</title>
     <link rel="stylesheet" href="./css/AlumnosPorDni.css">
+    <script src="js/AlumnosPorDni.js"></script>
 </head>
 <body>
     <header>
@@ -22,6 +23,35 @@
     </header>
     <main>
         <h2>Alumnos por DNI</h2>
+        <div>
+            <label for="dni">DNI/NIE:</label>
+            <input type="text" id="dni" onkeyup="alumnosPorDni()">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Fecha de nacimiento</th>
+                    <th scope="col">Acepta condiciones</th>
+                    <th scope="col">Tiene correo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Género</th>
+                    <th scope="col">Nivel de estudios</th>
+                    <th scope="col">Situación laboral</th>
+                    <th scope="col">Cómo nos has encontrado</th>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Pedanía</th>
+                    <th scope="col">Código Postal</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
     </main>
     <footer>
         <p>ThePower education</p>

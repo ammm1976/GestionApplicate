@@ -4,11 +4,10 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import servicio.ServicioAlumnosPorCurso;
+import servicio.ServicioAlumnosPorDni;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -18,16 +17,16 @@ import com.google.gson.GsonBuilder;
 import beans.Alumno;
 
 /**
- * Servlet implementation class AlumnosPorCurso
+ * Servlet implementation class AlumnosPorDni
  */
-public class AlumnosPorCurso extends HttpServlet {
+public class AlumnosPorDni extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger log = Logger.getLogger("mylog");
 	
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AlumnosPorCurso() {
+    public AlumnosPorDni() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,17 +38,17 @@ public class AlumnosPorCurso extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		log.debug("Peticion GET en el servlet");
-		ServicioAlumnosPorCurso servicioAlumnosPorCurso = new ServicioAlumnosPorCurso();
-		int curso = Integer.parseInt(request.getParameter("curso"));
+		ServicioAlumnosPorDni servicioAlumnosPorDni = new ServicioAlumnosPorDni();
+		String dni = request.getParameter("dni");
 		
 		try {
-			List<Alumno> alumnosPorCurso = servicioAlumnosPorCurso.recuperarListadoAlumnosPorCurso(curso);
+			Alumno alumno = servicioAlumnosPorDni.recuperarAlumnoPorDni(dni);
 			Gson gson = new GsonBuilder().setDateFormat("dd/MM/yyyy").create();
-			String listaJsonAlumnosPorCurso = gson.toJson(alumnosPorCurso);
-			response.getWriter().write(listaJsonAlumnosPorCurso);
+			String JsonAlumno = gson.toJson(alumno);
+			response.getWriter().write(JsonAlumno);
 			response.setStatus(200);
 			response.setContentType("application/json");
-			log.debug("La peticion fue bien " + listaJsonAlumnosPorCurso);
+			log.debug("La peticion fue bien " + JsonAlumno);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

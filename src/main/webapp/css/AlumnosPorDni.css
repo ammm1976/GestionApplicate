@@ -22,6 +22,20 @@ h2 {
     text-align: center;
 }
 
+div {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+label {
+    margin-right: 20px;
+}
+
+input {
+    width: 15ch;
+}
+
 table {
     margin: 0 auto;
 }
@@ -32,6 +46,8 @@ th {
 
 td {
     text-align: center;
+    padding: 0 10px;
+    white-space: nowrap;
 }
 
 footer {
