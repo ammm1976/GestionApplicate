@@ -1,6 +1,6 @@
-function cursosPorLocalizacion() {
-	let localizacion = document.getElementById("localizacion").value;
-	let url = "CursosPorLocalizacion?localizacion=" + localizacion;
+function cursosPorAlumno() {
+	let alumno = document.getElementById("alumno").value;
+	let url = "CursosPorAlumno?alumno=" + alumno;
 
 	fetch(url)
     .then(respuesta => {

@@ -23,7 +23,6 @@ function mostrarAlumno(alumno) {
 	let tbody = document.querySelector("tbody");
 	tbody.innerHTML = "";
 	
-    let tabla = document.querySelector("table");
 	let tr = document.createElement("tr");
 	tbody.appendChild(tr);
 

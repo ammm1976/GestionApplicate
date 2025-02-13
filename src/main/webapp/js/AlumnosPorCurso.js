@@ -24,7 +24,6 @@ function mostrarTablaAlumnos(listadoAlumnos) {
 	tbody.innerHTML = "";
 	
     listadoAlumnos.forEach(alumno => {
-		let tabla = document.querySelector("table");
 		let tr = document.createElement("tr");
 		tbody.appendChild(tr);
 

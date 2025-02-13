@@ -22,7 +22,11 @@ function mostrarTablaAlumnos(listadoAlumnos) {
 		let tr = document.createElement("tr");
 		tabla.appendChild(tr);
 
-        let nombre = document.createElement("td");
+        let id_alumno = document.createElement("td");
+		id_alumno.innerHTML = alumno.id_alumno;
+    	tr.appendChild(id_alumno);
+
+		let nombre = document.createElement("td");
 		nombre.innerHTML = alumno.nombre;
     	tr.appendChild(nombre);
 

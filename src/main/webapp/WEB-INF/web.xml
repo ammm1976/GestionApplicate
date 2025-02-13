@@ -59,4 +59,14 @@
     <servlet-name>CursosPorLocalizacion</servlet-name>
     <url-pattern>/CursosPorLocalizacion</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CursosPorAlumno</display-name>
+    <servlet-name>CursosPorAlumno</servlet-name>
+    <servlet-class>controlador.CursosPorAlumno</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CursosPorAlumno</servlet-name>
+    <url-pattern>/CursosPorAlumno</url-pattern>
+  </servlet-mapping>
 </web-app>
